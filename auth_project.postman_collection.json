@@ -1,0 +1,135 @@
+{
+  "info": {
+    "_postman_id": "e533ba9c-c209-4514-a488-cb411f52e361",
+    "name": "auth_project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55038236",
+    "_collection_link": "https://go.postman.co/collection/55038236-e533ba9c-c209-4514-a488-cb411f52e361?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "username",
+            "value": "Dana",
+            "type": "text"
+          },
+          {
+            "key": "email",
+            "value": "dana@mail.ru",
+            "type": "text"
+          },
+          {
+            "key": "password",
+            "value": "kz123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"Dana\",\r\n  \"email\": \"dana@mail.ru\",\r\n  \"password\": \"kz123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/auth/register",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "username",
+            "value": "Dana",
+            "type": "text"
+          },
+          {
+            "key": "password",
+            "value": "kz123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"Dana\",\r\n  \"password\": \"kz123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/auth/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "refresh",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3OTM2Mjc1NiwianRpIjoiZWYzNzhiYjYtYjQzYS00ZjgwLWIwMzktMGMzMDBjMzU0N2RhIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJEYW5hIiwibmJmIjoxNzc5MzYyNzU2LCJjc3JmIjoiYjhjOWM1OTEtYTFhYy00M2Y1LTg3MmQtNjI5NmQ2ZmY4MjI1IiwiZXhwIjoxNzgxOTU0NzU2fQ.NYNN8UG8lDsOsUF3c_bmxrk4-AdT1Txz7MWnqB_qt7I",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/auth/refresh",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "auth",
+            "refresh"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
